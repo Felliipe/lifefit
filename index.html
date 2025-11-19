@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifeFit Gym - Transforme seu Corpo</title>
+    <meta name="description" content="Academia LifeFit Gym. O melhor ambiente para sua evolução.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Montserrat (Body) and Bebas Neue (Headings - Fallback) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              iron: {
+                black: '#050505', // Um preto ligeiramente mais rico
+                dark: '#0f0f0f',
+                red: '#E50914',
+                white: '#FFFFFF',
+                gray: '#1f1f1f',
+                lightGray: '#333333'
+              }
+            },
+            fontFamily: {
+              sans: ['Montserrat', 'sans-serif'],
+              // Prioriza Integral CF, depois Integral, e usa Bebas Neue como fallback seguro
+              display: ['Integral CF', 'Integral', 'Bebas Neue', 'sans-serif'],
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Tenta carregar a fonte local se o usuário a tiver */
+      @font-face {
+        font-family: 'Integral CF';
+        src: local('Integral CF Bold'), local('Integral-Bold'), url('./fonts/IntegralCF-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #050505;
+        color: #FFFFFF;
+        overflow-x: hidden;
+      }
+      
+      /* Scrollbar Personalizada - Look Profissional */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f0f0f; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #E50914; 
+      }
+
+      /* Utilitário para seleção de texto */
+      ::selection {
+        background: #E50914;
+        color: #fff;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
